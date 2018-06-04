@@ -1,0 +1,101 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>freeCodeCamp Exercise Tracker</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        freeCodeCamp Exercise Tracker
+      </h1>
+    </header>
+
+    <section>
+      <div>
+        <form method="POST" action="/api/exercise/new-user">
+          <fieldset>
+            <legend>
+              POST /api/exercise/new-user
+            </legend>
+            <label>User name:</label>
+            <input type="text" pattern="^\w+$" name="userId" required>
+            <button type="submit">
+              Submit
+            </button>
+          </fieldset>
+        </form>  
+      </div>
+      <div>
+        <form method="POST" action="/api/exercise/add">
+          <fieldset>
+            <legend>
+              POST /api/exercise/add
+            </legend>
+            <label>User name:</label>
+            <input type="text" name="userId" pattern="^\w+$" required>
+            <label>Description:</label>
+            <input type="text" name="description" required>
+            <label>Duration:</label>
+            <input type="text" name="duration" required>
+            <label>Date (YYYY-MM-DD):</label>
+            <input type="text" name="date" pattern="\d{4}-\d{1,2}-\d{1,2}" required>
+            <button type="submit">
+              Submit
+            </button>
+          </fieldset>
+        </form>  
+      </div>
+      <div>
+        <form method="GET" action="/api/exercise/log">
+          <fieldset>
+            <legend>
+              GET /api/exercise/log?{userId}[&from][&to][&limit]
+            </legend>
+            <label>User name:</label>
+            <input type="text" name="userId" pattern="^\w+$" required>
+            <label>Start Date (YYYY-MM-DD):</label>
+            <input type="text" name="from" pattern="\d{4}-\d{1,2}-\d{1,2}">
+            <label>End Date (YYYY-MM-DD):</label>
+            <input type="text" name="to" pattern="\d{4}-\d{1,2}-\d{1,2}">
+            <label>Limit:</label>
+            <input type="number" name="limit">
+            <button>
+              Submit
+            </button>
+          </fieldset>
+        </form>  
+      </div>  
+    </section>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+    
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js"></script>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
