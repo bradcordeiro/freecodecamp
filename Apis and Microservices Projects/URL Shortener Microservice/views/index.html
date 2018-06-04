@@ -1,0 +1,42 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>URL Shortener Microservice</h1>
+
+    <h3>Example #1:</h3>
+    <h4>HTTP GET:</h4>
+    <p>https://treasure-fibre.glitch.me/new/https://www.freecodecamp.com/challenges/url-shortener-microservice</p>
+    <h4>Response:</h4>
+    <p>{<br>&emsp;&emsp;&emsp;&emsp;"original_url":"https://www.freecodecamp.com/challenges/url-shortener-microservice",<br>&emsp;&emsp;&emsp;&emsp;"short_url":"https://treasure-fibre.glitch.me/0"<br>}</p>
+    <h4>Visiting https://treasure-fibre.glitch.me/0 will redirect to:</h4>
+    <p>https://www.freecodecamp.com/challenges/url-shortener-microservice</p>
+    <h3>Example #2:</h3>
+    <h4>HTTP GET:</h4>
+    <p>https://treasure-fibre.glitch.me/new/https://expressjs.com/en/api.html</p>
+    <h4>Response:</h4>
+    <p>{<br>&emsp;&emsp;&emsp;&emsp;"original_url":"https://expressjs.com/en/api.html",<br>&emsp;&emsp;&emsp;&emsp;"short_url":"https://treasure-fibre.glitch.me/2"<br>}</p>
+    <h4>Visiting https://treasure-fibre.glitch.me/2 will redirect to:</h4>
+    <p>https://expressjs.com/en/api.html</p>
+    <hr />
+    <a href="https://glitch.com">Remix this in Glitch</a>
+
+  </body>
+</html>
