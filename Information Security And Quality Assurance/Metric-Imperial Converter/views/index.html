@@ -1,0 +1,42 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<html>
+  <head>
+    <title>Welcome to Met-Tricks!</title>
+    <meta name="description" content="A metric-imperial conversion API">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Met-Tricks
+      </h1>
+    </header>
+    <section>
+      <h3>Example usage:</h3>
+      <code>/api/convert?input=4gal</code><br>
+      <code>/api/convert?input=1/2km</code><br>
+      <code>/api/convert?input=5.4/3lbs</code><br>
+      <code>/api/convert?input=kg</code><br>
+      <h3>Example return:</h3>
+      <code>{initNum: 3.1, initUnit: 'mi', returnNum: 5, returnUnit: 'km', string: '3.1 miles converts to 5.00002 kilometers'}</code>
+    </section>
+    <section>
+      <h2>Front-End:</h2>
+      <form method="GET" action="/api/convert" class="border">
+        <input type="text" name="input" placeholder="3.1mi">
+        <button type="submit">Convert!</button>
+      </form>
+    </section>
+  </body>
+</html>
