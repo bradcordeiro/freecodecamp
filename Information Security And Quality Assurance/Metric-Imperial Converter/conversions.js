@@ -38,19 +38,14 @@ const conversions = {
     switch (initUnit) {
     case 'gal':
       return this.galToL(initNum);
-      break;
     case 'L':
       return this.lToGal(initNum);
-      break;
     case 'lbs':
       return this.lbsToKg(initNum);
-      break;
     case 'kg':
       return this.kgToLbs(initNum);
-      break;
     case 'mi':
       return this.miToKm(initNum);
-      break;
     case 'km':
       return this.kmtoMi(initNum);
     }
